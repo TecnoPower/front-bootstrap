@@ -14,31 +14,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
         integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <link rel="stylesheet" href="_css/scroll.css">
-        <link rel="stylesheet" href="_css/footer.css">
+    <link rel="stylesheet" href="_css/scroll.css">
+    <link rel="stylesheet" href="_css/footer.css">
     <link rel="icon" type="imagem/png" href="_uploads/logotipo.png" />
     <title>Mentor PANIC</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
-        <div class="mx-auto">
-            <a class="navbar-brand ps-4" href="index.html">
-                <img src="_uploads/panic_no_padding.gif" alt="..." height="50">
-            </a>
-        </div>
-        <ul class="nav justify-content-center w-100">
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Nome" aria-label="Search">
-                <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
-            </form>
+        <a class="navbar-brand ps-4" href="index.html">
+            <img src="_uploads/panic_no_padding.gif" alt="..." height="50">
+        </a>
+        <ul class="nav justify-content-rigth pe-2">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
         </ul>
-        <div class="collapse navbar-collapse pe-4" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse ps-2" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <a class="nav-link text-light" aria-current="page" href="#">Home</a>
@@ -46,28 +40,44 @@
                 <li class="nav-item">
                     <a class="nav-link text-light" href="#">Link</a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown d-none d-lg-block">
                     <a class="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Opções
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Editar meu Dados</a></li>
+                        <li><a class="dropdown-item" href="#">Editar meu Dados</a>
+                        </li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Editar Senha</a></li>
+                        <li><a class="dropdown-item" href="#">Editar Senha</a>
+                        </li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">Log-out</a></li>
+                        <li><a class="dropdown-item" href="#">Log-out</a>
+                        </li>
                     </ul>
+                </li>
+                <li class="nav-item d-lg-none d-xxl-none d-xl-none">
+                    <a class="nav-link text-light" href="#">Editar meu Dados</a>
+                </li>
+                <li class="nav-item d-lg-none d-xxl-none d-xl-none">
+                    <a class="nav-link text-light" href="#">Editar Senha</a>
+                </li>
+                <li class="nav-item d-lg-none d-xxl-none d-xl-none">
+                    <a class="nav-link text-light" href="#">Log-out</a>
                 </li>
             </ul>
         </div>
     </nav>
 
     <div class="container mx-auto pt-3">
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Nome" aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
+        </form>
         <table class="table">
             <thead>
                 <tr>
