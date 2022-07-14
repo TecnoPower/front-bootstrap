@@ -10,12 +10,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
         integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
         crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
-        integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <link rel="stylesheet" href="_css/scroll.css">
-        <link rel="stylesheet" href="_css/footer.css">
+    <link rel="stylesheet" href="_css/scroll.css">
+    <link rel="stylesheet" href="_css/footer.css">
     <link rel="icon" type="imagem/png" href="_uploads/logotipo.png" />
     <title>Mentor Cadastro</title>
 </head>
@@ -30,85 +26,119 @@
         </ul>
     </nav>
 
-    <div class="container mx-auto pt-5">
+    <div class="container w-50 pt-5">
         <form action="" method="get">
             <div class="row g-2">
                 <div class="col-md ps-4">
-                    <label for="campo-email" class="form-label">Email</label>
-                    <input required type="email" class="form-control" id="campo-email" placeholder="nome@dominio.com" />
+                    <div class="form-floating mb-3">
+                        <input required type="email" class="form-control" id="float-nome" placeholder="Nome Completo">
+                        <label for="float-nome">Nome Completo</label>
+                    </div>
                 </div>
                 <div class="col-md ps-4">
-                    <label for="imput-data" class="form-label">Data de Nascimento</label>
-                    <input required class="form-control" type="date" id="imput-data" />
-                </div>
-            </div>
-            <div class="row g-2 pt-2">
-                <div class="col-md ps-4">
-                    <label for="campo-nome" class="form-label">Nome Completo</label>
-                    <input required type="text" class="form-control" id="campo-nome" placeholder="" />
-                </div>
-                <div class="col-md ps-4">
-                    <label for="select-genero" class="form-label">Gênero</label>
-                    <select class="form-select" aria-label="" id="select-genero">
-                        <option selected disabled>Selecione</option>
-                        <option value="Homem">Homem</option>
-                        <option value="Mulher">Mulher</option>
-                        <option value="Não binário">Não binário</option>
-                        <option value="Outros">Outros</option>
-                        <option value="Prefiro não dizer">Prefiro não dizer</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row g-2 pt-2">
-                <div class="col-md ps-4">
-                    <label for="campo-cpf" class="form-label">CPF</label>
-                    <input required type="text" class="form-control" id="campo-cpf" />
-                </div>
-                <div class="col-md ps-4">
-                    <label for="campo-numero" class="form-label">Número de Telefone com WhatsApp</label>
-                    <input required type="text" class="form-control" id="campo-numero" />
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-floating mb-3">
+                                <input required type="text" class="form-control" id="float-date"
+                                    placeholder="Data de Nascimento">
+                                <label for="float-date">Data de Nascimento</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <select class="form-select" id="float-genero" aria-label="Gênero">
+                                    <option selected disabled>Selecione</option>
+                                    <option value="Homem">Homem</option>
+                                    <option value="Mulher">Mulher</option>
+                                    <option value="Não binário">Não binário</option>
+                                    <option value="Outros">Outros</option>
+                                    <option value="Prefiro não dizer">Prefiro não dizer</option>
+                                </select>
+                                <label for="float-genero">Gênero</label>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="row g-2 pt-2">
                 <div class="col-md ps-4">
-                    <label for="campo-senha1" class="form-label">Senha</label>
-                    <input required type="password" class="form-control" id="campo-senha1" />
+                    <div class="form-floating mb-3">
+                        <input required type="email" class="form-control" id="campo-email"
+                            placeholder="nome@dominio.com" />
+                        <label for="campo-email" class="form-label">Email</label>
+                    </div>
                 </div>
                 <div class="col-md ps-4">
-                    <label for="campo-senha2" class="form-label">Confirme sua senha</label>
-                    <input required type="password" class="form-control" id="campo-senha2" />
+                    <div class="form-floating">
+                        <input required type="text" class="form-control" id="campo-cpf" placeholder="CPF" />
+                        <label for="campo-cpf" class="form-label">CPF</label>
+                    </div>
                 </div>
             </div>
             <div class="row g-2 pt-2">
                 <div class="col-md ps-4">
-                    <label for="select-area" class="form-label">Área</label>
-                    <select class="form-select" aria-label="" id="select-area">
-                        <option selected disabled>Selecione</option>
-                        <option value="Linguística, Letras e Artes">Linguística, Letras e Artes</option>
-                        <option value="Ciências Sociais Aplicadas">Ciências Sociais Aplicadas</option>
-                        <option value="Ciências Humanas">Ciências Humanas</option>
-                        <option value="Engenharias">Engenharias</option>
-                        <option value="TI e Derivados">TI e Derivados</option>
-                        <option value="Ciências da Saúde">Ciências da Saúde</option>
-                        <option value="Ciências Biológicas">Ciências Biológicas</option>
-                        <option value="Ciências Agrárias">Ciências Agrárias</option>
-                    </select>
+                    <div class="form-floating">
+                        <input required type="text" class="form-control"
+                            placeholder="Informe sua profissão com mais detalhes" id="campo-profissao" />
+                        <label for="campo-profissao" class="form-label">Profissão</label>
+                    </div>
+                </div>
+                <div class="col-md ps-4">
+                    <div class="form-floating">
+
+                        <input required type="text" placeholder="WhatsApp" class="form-control" id="campo-numero" />
+                        <label for="campo-numero" class="form-label">WhatsApp</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-2 pt-2">
+                <div class="col-md ps-4">
+                    <div class="form-floating">
+                        <select class="form-select" id="select-area" aria-label="Floating label select example">
+                            <option selected disabled>Selecione</option>
+                            <option value="Linguística, Letras e Artes">Linguística, Letras e Artes</option>
+                            <option value="Ciências Sociais Aplicadas">Ciências Sociais Aplicadas</option>
+                            <option value="Ciências Humanas">Ciências Humanas</option>
+                            <option value="Engenharias">Engenharias</option>
+                            <option value="TI e Derivados">TI e Derivados</option>
+                            <option value="Ciências da Saúde">Ciências da Saúde</option>
+                            <option value="Ciências Biológicas">Ciências Biológicas</option>
+                            <option value="Ciências Agrárias">Ciências Agrárias</option>
+                        </select>
+                        <label for="select-area">Área</label>
+                    </div>
+                </div>
+                <div class="col-md ps-4">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-floating">
+                                <input required type="password" placeholder="Senha" class="form-control"
+                                    id="campo-senha1" />
+                                <label for="campo-senha1" class="form-label">Senha</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-floating">
+                                <input required type="password" placeholder="Repetir Senha" class="form-control"
+                                    id="campo-senha2" />
+                                <label for="campo-senha2" class="form-label d-none d-lg-block">Repetir Senha</label>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
-                <div class="col-md ps-4">
-                    <label for="campo-profissao" class="form-label">Profissão</label>
-                    <input required type="text" class="form-control"
-                        placeholder="Informe sua profissão com mais detalhes" id="campo-profissao" />
-                </div>
             </div>
             <div class="row g-2 pt-2">
                 <div class="col-md ps-4">
-                    <label for="campo-seguranca" class="form-label">Número de segurança</label>
-                    <input required type="number" class="form-control" id="campo-seguranca"
-                        aria-describedby="seguranca-help">
+                    <div class="form-floating">
+                        <input required type="number" class="form-control" id="campo-seguranca"
+                            aria-describedby="seguranca-help" placeholder="Número de segurança" />
+                        <label for="campo-seguranca" class="form-label">Número de segurança</label>
+                    </div>
                     <div id="seguranca-help" class="form-text">
                         <strong>
-                            <h6 id="texto-piscar" class="text-dark">Guarde esse número para um possível esquecimento de senha</h6>
+                            <h6 id="texto-piscar" class="text-dark">Guarde esse número para um possível esquecimento de
+                                senha</h6>
                         </strong>
                     </div>
                 </div>
@@ -135,13 +165,6 @@
         $(document).ready(function () {
             $('#campo-cpf').mask('000.000.000-00');
             $('#campo-numero').mask('(00)0 0000-0000');
-            function pisca() {
-                var f = document.getElementById('texto-piscar');
-                setInterval(function () {
-                    f.style.visibility = (f.style.visibility == 'hidden' ? '' : 'hidden');
-                }, 2000);
-            }
-            pisca();
         });
     </script>
 </body>
